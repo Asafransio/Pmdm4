@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DaVinciApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">DaVinciApp</string>
+    <string name="nav_header_subtitle">creado por Francisco José Borrallo</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Alta</string>
+    <string name="action_settings1">Baja</string>
+    <string name="action_settings2">Modificación</string>
+
+    <string name="menu_home">Pintor</string>
+    <string name="menu_gallery">Escultor</string>
+    <string name="menu_slideshow">Cientifico</string>
+    <string name="menu_inventor">Inventor</string>
+
+    <string name="texto_pintura">La Mona Lisa es el retrato que más literatura ha generado a lo largo de toda la historia del arte; ha dado origen a cuentos, novelas, poemas y hasta óperas.</string>
+    <string name="texto_invent">El tornillo aéreo, 1486, considerado el antecesor del helicóptero.</string>
+    <string name="texto_ciencia">Como artista, pronto fue un maestro de la anatomía topográfica, realizando numerosos estudios sobre músculos, tendones y otras características anatómicas visibles.</string>
+    <string name="texto_escultura">«La Virgen con el Niño Sonriente» es la única estatua del maestro del Renacimiento, Leonardo da Vinci, que ha sobrevivido al paso del tiempo.</string>
+</resources>
