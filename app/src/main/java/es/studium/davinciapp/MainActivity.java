@@ -1,8 +1,11 @@
 package es.studium.davinciapp;
 
+import android.content.ClipData;
 import android.os.Bundle;
+import android.view.ActionProvider;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,9 +21,10 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    MenuItem alta = findViewById(R.id.action_settings);
-    MenuItem baja = findViewById(R.id.action_settings1);
-    MenuItem modif = findViewById(R.id.action_settings2);
+    private Menu menu;
+    // MenuItem alta = findViewById(R.id.action_settings);
+   // MenuItem baja = findViewById(R.id.action_settings1);
+   // MenuItem modif = findViewById(R.id.action_settings2);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
+
         getMenuInflater().inflate(R.menu.main, menu);
+
+        MenuItem item = findViewById(R.id.action_settings);
+
+        menu.getItem(0).setOnMenuItemClickListener(a);
+
+        menu.getItem(1).setOnMenuItemClickListener(b);
+
+        menu.getItem(2).setOnMenuItemClickListener(c);
+
+
 
         return true;
     }
@@ -62,17 +78,28 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    public boolean onOptionsItemSelected (MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings: Toast.makeText(this, R.string.action_settings, Toast.LENGTH_LONG).show();
-            break;
 
-            case R.id.action_settings1: Toast.makeText(this, R.string.action_settings1, Toast.LENGTH_LONG).show();
-                break;
-
-            case R.id.action_settings2: Toast.makeText(this, R.string.action_settings2, Toast.LENGTH_LONG).show();
-                break;
+    MenuItem.OnMenuItemClickListener a = new MenuItem.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            Toast.makeText(MainActivity.this, "Dar de alta", Toast.LENGTH_SHORT).show();
+            return true;
         }
-        return super.onOptionsItemSelected(item);
-    }
+    };
+
+    MenuItem.OnMenuItemClickListener b = new MenuItem.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            Toast.makeText(MainActivity.this, "Dar de baja", Toast.LENGTH_LONG).show();
+            return true;
+        }
+    };
+
+    MenuItem.OnMenuItemClickListener c = new MenuItem.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            Toast.makeText(MainActivity.this, "Hacer una modificación", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+    };
 }
